@@ -2,7 +2,7 @@ package leetcode;
 
 
   
-   class TreeNode {
+   public class TreeNode {
       int val;
       TreeNode left;
       TreeNode right;
@@ -39,7 +39,8 @@ public class TreeTraversal {
 
 
 	public static void main(String[] args) {
-		increasingBST(root);
+		TreeNode root = null;
+		increasingBST(root );
 	}
 
 }
