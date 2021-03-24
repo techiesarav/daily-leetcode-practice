@@ -1,25 +1,20 @@
 package leetcode;
 
 
-  
-   public class TreeNode {
-      int val;
-      TreeNode left;
-      TreeNode right;
-      TreeNode() {}
-      TreeNode(int val) { this.val = val; }
-      TreeNode(int val, TreeNode left, TreeNode right) {
-          this.val = val;
-          this.left = left;
-          this.right = right;
-      }
-  }
- 
-class Solution {}
 
 public class TreeTraversal {
 	
-
+	static class TreeNode{
+		TreeNode right;
+		TreeNode left;
+		int val;
+		
+		TreeNode(int val){
+			this.val = val;
+			this.right = null;
+			this.left = null;
+		}
+	}
     
     private static void inOrderTraversal(TreeNode root,TreeNode result){
         if(root.left !=null){

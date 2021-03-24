@@ -1,6 +1,7 @@
 package leetcode;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -74,5 +75,12 @@ public class SmallestNegativeBalance {
 	            System.out.print(r+" ");
 	        }
 	        System.out.println();
+	        ArrayList<String> gfg = new ArrayList<String>( 
+	                Arrays.asList("Geeks", 
+	                              "for", 
+	                              "Geeks")); 
+	      
+	            // print ArrayList 
+	            System.out.println("ArrayList : " + gfg); 
 	    }
 }

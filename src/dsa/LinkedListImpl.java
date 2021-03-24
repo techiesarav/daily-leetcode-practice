@@ -54,6 +54,23 @@ class LinkedList{
 		return pos;
 	}
 	
+	public void delete(int key) {
+		int pos = search(key);
+		if(pos ==-1) {
+			return;
+		}
+		if(pos ==0) {
+			head =head.next;
+		}
+		Node cur = head;
+		for(int i=0;i<pos-1;i++) {
+			cur=cur.next;
+		}
+		Node temp = cur.next;
+		cur.next = temp.next;
+//		temp.next =null;
+	}
+	
 	public void print() {
 		Node cur = head;
 		while(cur !=null) {
@@ -62,6 +79,25 @@ class LinkedList{
 		}
 		System.out.print("null");
 		System.out.print("\n");
+	}
+	
+	public void reverse() {
+		reverseLinkedList(head);
+	}
+	
+	private Node reverseLinkedList(Node head) {
+		if(head ==null)
+			return head;
+		if(head.next == null)
+			return head;
+		Node newHeadNode = reverseLinkedList(head.next);
+		 // change references for middle chain 
+        head.next.next = head; 
+        head.next = null; 
+  
+        // send back new head node in every recursion 
+        return newHeadNode;
+		
 	}
 }
 
@@ -74,9 +110,11 @@ public class LinkedListImpl {
 		ls.insert(3);
 		ls.insert(4);
 		ls.insert(5);
-		ls.insert(6,2);
+//		ls.delete(2);
+//		ls.insert(6,2);
+		ls.reverse();
 		ls.print();
-		System.out.println("key 2 is at position "+ ls.search(2));
+//		System.out.println("key 2 is at position "+ ls.search(2));
 	}
 
 }
